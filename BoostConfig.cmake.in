@@ -70,7 +70,7 @@ foreach(_boost_component ${Boost_INSTALLED_COMPONENTS})
   string(TOUPPER "${_boost_component}" _boost_component_upper)
 
   set(Boost_${_boost_component_upper}_FOUND 1)
-  set(Boost_${_boost_component_upper}_LIBRARY "boost_${_boost_component}" CACHE FILEPATH "Path (imported) to the Boost ${_boost_component} library")
+  set(Boost_${_boost_component_upper}_LIBRARY "Boost::${_boost_component}" CACHE FILEPATH "Path (imported) to the Boost ${_boost_component} library")
 
   set(Boost_${_boost_component}_FOUND 1)
   set(Boost_${_boost_component}_LIBRARY "${Boost_${_boost_component_upper}_LIBRARY}")

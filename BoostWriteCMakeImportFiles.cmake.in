@@ -118,9 +118,9 @@ function(write_boost_libdepfile _var _dir _link _thread _variant)
     # Write the stanza
     # Handle the weird case of boost_thread, which is always -mt
     if(_comp STREQUAL "thread" AND NOT _libmttag)
-      make_import_target(_text boost_${_comp} "${_libprefix}${_comp}-mt${_libvrtag}${_libsuffix}" ${_variant})
+      make_import_target(_text Boost::${_comp} "${_libprefix}${_comp}-mt${_libvrtag}${_libsuffix}" ${_variant})
     else()
-      make_import_target(_text boost_${_comp} "${_libprefix}${_comp}${_libmttag}${_libvrtag}${_libsuffix}" ${_variant})
+      make_import_target(_text Boost::${_comp} "${_libprefix}${_comp}${_libmttag}${_libvrtag}${_libsuffix}" ${_variant})
     endif()
     set(_addimports "${_addimports}${_text}")
     # Here's where we'd need to handle any link dependencies
