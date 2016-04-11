@@ -18,7 +18,7 @@ SET(CMAKE_IMPORT_FILE_VERSION 1)
 # Create imported targets "boost_<component>"
 set(Boost_INSTALLED_COMPONENTS @BOOST_COMPONENTS@)
 foreach(_boost_comp ${Boost_INSTALLED_COMPONENTS})
-  ADD_LIBRARY(boost_${_boost_comp} @BOOST_LINK_MODEL@ IMPORTED)
+  ADD_LIBRARY(Boost::${_boost_comp} @BOOST_LINK_MODEL@ IMPORTED)
 endforeach()
 
 # Load information for each installed configuration.
